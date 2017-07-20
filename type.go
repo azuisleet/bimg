@@ -32,7 +32,7 @@ type ImageType int
 
 var (
 	htmlCommentRegex = regexp.MustCompile("(?i)<!--([\\s\\S]*?)-->")
-	svgRegex         = regexp.MustCompile(`(?i)^\s*(?:<\?xml[^>]*>\s*)?(?:<!doctype svg[^>]*>\s*)?<svg[^>]*>[\s\S]*<\/svg>\s*$`)
+	svgRegex         = regexp.MustCompile(`(?is)^\s*(?:<\?xml[^>]*>\s*)?(?:<!doctype svg[^>]*>\s*)?.*?<svg[^>]*>.*<\/svg>.*$`)
 )
 
 // ImageTypes stores as pairs of image types supported and its alias names.
